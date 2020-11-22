@@ -23,7 +23,7 @@
         <property name="Label" translatable="yes">Інформація</property>
         <property name="ShortLabel" translatable="yes">Інформація</property>
       </action>
-      <action id="Action2">
+      <action id="AboutAuthorAction">
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Про автора</property>
         <property name="ShortLabel" translatable="yes">Про автора</property>
@@ -45,7 +45,7 @@
                 <node type="Menuitem" action="HTMLAction" />
               </node>
               <node type="Menu" action="Action1">
-                <node type="Menuitem" action="Action2" />
+                <node type="Menuitem" action="AboutAuthorAction" />
               </node>
             </node>
           </widget>
@@ -82,7 +82,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.ComboBox" id="combobox1">
+                      <widget class="Gtk.ComboBox" id="comboboxTitle">
                         <property name="MemberName" />
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes" />
@@ -118,7 +118,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.ComboBox" id="combobox2">
+                      <widget class="Gtk.ComboBox" id="comboboxAuthor">
                         <property name="MemberName" />
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes" />
@@ -154,7 +154,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.ComboBox" id="combobox3">
+                      <widget class="Gtk.ComboBox" id="comboboxGenre">
                         <property name="MemberName" />
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes" />
@@ -189,7 +189,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.ComboBox" id="combobox4">
+                      <widget class="Gtk.ComboBox" id="comboboxLanguage">
                         <property name="MemberName" />
                         <property name="IsTextCombo">True</property>
                         <property name="Items" translatable="yes" />
@@ -222,7 +222,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.SpinButton" id="spinbutton1">
+                      <widget class="Gtk.SpinButton" id="spinbuttonDateFrom">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Upper">100</property>
@@ -251,7 +251,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.SpinButton" id="spinbutton2">
+                      <widget class="Gtk.SpinButton" id="spinbuttonDateTo">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Upper">2020</property>
@@ -291,7 +291,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.SpinButton" id="spinbutton3">
+                      <widget class="Gtk.SpinButton" id="spinbuttonPagesFrom">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Upper">100</property>
@@ -320,7 +320,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.SpinButton" id="spinbutton4">
+                      <widget class="Gtk.SpinButton" id="spinbuttonPagesTo">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Upper">100</property>
@@ -349,7 +349,7 @@
                     <property name="MemberName" />
                     <property name="Spacing">6</property>
                     <child>
-                      <widget class="Gtk.RadioButton" id="radiobutton3">
+                      <widget class="Gtk.RadioButton" id="radiobuttonLINQ">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Label" translatable="yes">LINQ</property>
@@ -365,7 +365,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.RadioButton" id="radiobutton2">
+                      <widget class="Gtk.RadioButton" id="radiobuttonSAX">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Label" translatable="yes">SAX</property>
@@ -380,7 +380,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.RadioButton" id="radiobutton1">
+                      <widget class="Gtk.RadioButton" id="radiobuttonDOM">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Label" translatable="yes">DOM</property>
@@ -407,7 +407,7 @@
                     <property name="MemberName" />
                     <property name="Spacing">6</property>
                     <child>
-                      <widget class="Gtk.Button" id="button5">
+                      <widget class="Gtk.Button" id="buttonSearch">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Type">TextOnly</property>
@@ -420,7 +420,7 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="Gtk.Button" id="button4">
+                      <widget class="Gtk.Button" id="buttonClear">
                         <property name="MemberName" />
                         <property name="CanFocus">True</property>
                         <property name="Type">TextOnly</property>
@@ -454,7 +454,7 @@
                 <property name="MemberName" />
                 <property name="ShadowType">In</property>
                 <child>
-                  <widget class="Gtk.TextView" id="textview1">
+                  <widget class="Gtk.TextView" id="textview">
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="ShowScrollbars">True</property>

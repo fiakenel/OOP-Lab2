@@ -11,7 +11,7 @@ public partial class MainWindow
 
 	private global::Gtk.Action Action1;
 
-	private global::Gtk.Action Action2;
+	private global::Gtk.Action AboutAuthorAction;
 
 	private global::Gtk.VBox vbox1;
 
@@ -25,63 +25,63 @@ public partial class MainWindow
 
 	private global::Gtk.Label label1;
 
-	private global::Gtk.ComboBox combobox1;
+	private global::Gtk.ComboBox comboboxTitle;
 
 	private global::Gtk.HBox hbox7;
 
 	private global::Gtk.Label label2;
 
-	private global::Gtk.ComboBox combobox2;
+	private global::Gtk.ComboBox comboboxAuthor;
 
 	private global::Gtk.HBox hbox6;
 
 	private global::Gtk.Label label3;
 
-	private global::Gtk.ComboBox combobox3;
+	private global::Gtk.ComboBox comboboxGenre;
 
 	private global::Gtk.HBox hbox5;
 
 	private global::Gtk.Label label4;
 
-	private global::Gtk.ComboBox combobox4;
+	private global::Gtk.ComboBox comboboxLanguage;
 
 	private global::Gtk.HBox hbox4;
 
 	private global::Gtk.Label label5;
 
-	private global::Gtk.SpinButton spinbutton1;
+	private global::Gtk.SpinButton spinbuttonDateFrom;
 
 	private global::Gtk.Label label7;
 
-	private global::Gtk.SpinButton spinbutton2;
+	private global::Gtk.SpinButton spinbuttonDateTo;
 
 	private global::Gtk.HBox hbox3;
 
 	private global::Gtk.Label label6;
 
-	private global::Gtk.SpinButton spinbutton3;
+	private global::Gtk.SpinButton spinbuttonPagesFrom;
 
 	private global::Gtk.Label label8;
 
-	private global::Gtk.SpinButton spinbutton4;
+	private global::Gtk.SpinButton spinbuttonPagesTo;
 
 	private global::Gtk.HBox hbox2;
 
-	private global::Gtk.RadioButton radiobutton3;
+	private global::Gtk.RadioButton radiobuttonLINQ;
 
-	private global::Gtk.RadioButton radiobutton2;
+	private global::Gtk.RadioButton radiobuttonSAX;
 
-	private global::Gtk.RadioButton radiobutton1;
+	private global::Gtk.RadioButton radiobuttonDOM;
 
 	private global::Gtk.HBox hbox9;
 
-	private global::Gtk.Button button5;
+	private global::Gtk.Button buttonSearch;
 
-	private global::Gtk.Button button4;
+	private global::Gtk.Button buttonClear;
 
 	private global::Gtk.ScrolledWindow GtkScrolledWindow;
 
-	private global::Gtk.TextView textview1;
+	private global::Gtk.TextView textview;
 
 	protected virtual void Build()
 	{
@@ -98,9 +98,9 @@ public partial class MainWindow
 		this.Action1 = new global::Gtk.Action("Action1", global::Mono.Unix.Catalog.GetString("Інформація"), null, null);
 		this.Action1.ShortLabel = global::Mono.Unix.Catalog.GetString("Інформація");
 		w1.Add(this.Action1, null);
-		this.Action2 = new global::Gtk.Action("Action2", global::Mono.Unix.Catalog.GetString("Про автора"), null, null);
-		this.Action2.ShortLabel = global::Mono.Unix.Catalog.GetString("Про автора");
-		w1.Add(this.Action2, null);
+		this.AboutAuthorAction = new global::Gtk.Action("AboutAuthorAction", global::Mono.Unix.Catalog.GetString("Про автора"), null, null);
+		this.AboutAuthorAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Про автора");
+		w1.Add(this.AboutAuthorAction, null);
 		this.UIManager.InsertActionGroup(w1, 0);
 		this.AddAccelGroup(this.UIManager.AccelGroup);
 		this.Name = "MainWindow";
@@ -113,7 +113,8 @@ public partial class MainWindow
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.UIManager.AddUiFromString("<ui><menubar name=\'menubar1\'><menu name=\'Action\' action=\'Action\'><menuitem name=\'" +
 				"HTMLAction\' action=\'HTMLAction\'/></menu><menu name=\'Action1\' action=\'Action1\'><m" +
-				"enuitem name=\'Action2\' action=\'Action2\'/></menu></menubar></ui>");
+				"enuitem name=\'AboutAuthorAction\' action=\'AboutAuthorAction\'/></menu></menubar></" +
+				"ui>");
 		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
 		this.menubar1.Name = "menubar1";
 		this.vbox1.Add(this.menubar1);
@@ -144,10 +145,10 @@ public partial class MainWindow
 		w3.Fill = false;
 		w3.Padding = ((uint)(28));
 		// Container child hbox8.Gtk.Box+BoxChild
-		this.combobox1 = global::Gtk.ComboBox.NewText();
-		this.combobox1.Name = "combobox1";
-		this.hbox8.Add(this.combobox1);
-		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox8[this.combobox1]));
+		this.comboboxTitle = global::Gtk.ComboBox.NewText();
+		this.comboboxTitle.Name = "comboboxTitle";
+		this.hbox8.Add(this.comboboxTitle);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.hbox8[this.comboboxTitle]));
 		w4.Position = 1;
 		this.vbox2.Add(this.hbox8);
 		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox8]));
@@ -169,10 +170,10 @@ public partial class MainWindow
 		w6.Fill = false;
 		w6.Padding = ((uint)(13));
 		// Container child hbox7.Gtk.Box+BoxChild
-		this.combobox2 = global::Gtk.ComboBox.NewText();
-		this.combobox2.Name = "combobox2";
-		this.hbox7.Add(this.combobox2);
-		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox7[this.combobox2]));
+		this.comboboxAuthor = global::Gtk.ComboBox.NewText();
+		this.comboboxAuthor.Name = "comboboxAuthor";
+		this.hbox7.Add(this.comboboxAuthor);
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox7[this.comboboxAuthor]));
 		w7.Position = 1;
 		this.vbox2.Add(this.hbox7);
 		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox7]));
@@ -194,10 +195,10 @@ public partial class MainWindow
 		w9.Fill = false;
 		w9.Padding = ((uint)(30));
 		// Container child hbox6.Gtk.Box+BoxChild
-		this.combobox3 = global::Gtk.ComboBox.NewText();
-		this.combobox3.Name = "combobox3";
-		this.hbox6.Add(this.combobox3);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.combobox3]));
+		this.comboboxGenre = global::Gtk.ComboBox.NewText();
+		this.comboboxGenre.Name = "comboboxGenre";
+		this.hbox6.Add(this.comboboxGenre);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.comboboxGenre]));
 		w10.Position = 1;
 		this.vbox2.Add(this.hbox6);
 		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox6]));
@@ -218,10 +219,10 @@ public partial class MainWindow
 		w12.Expand = false;
 		w12.Fill = false;
 		// Container child hbox5.Gtk.Box+BoxChild
-		this.combobox4 = global::Gtk.ComboBox.NewText();
-		this.combobox4.Name = "combobox4";
-		this.hbox5.Add(this.combobox4);
-		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.combobox4]));
+		this.comboboxLanguage = global::Gtk.ComboBox.NewText();
+		this.comboboxLanguage.Name = "comboboxLanguage";
+		this.hbox5.Add(this.comboboxLanguage);
+		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.comboboxLanguage]));
 		w13.Position = 1;
 		this.vbox2.Add(this.hbox5);
 		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox5]));
@@ -240,14 +241,14 @@ public partial class MainWindow
 		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.label5]));
 		w15.Position = 0;
 		// Container child hbox4.Gtk.Box+BoxChild
-		this.spinbutton1 = new global::Gtk.SpinButton(0D, 100D, 1D);
-		this.spinbutton1.CanFocus = true;
-		this.spinbutton1.Name = "spinbutton1";
-		this.spinbutton1.Adjustment.PageIncrement = 10D;
-		this.spinbutton1.ClimbRate = 1D;
-		this.spinbutton1.Numeric = true;
-		this.hbox4.Add(this.spinbutton1);
-		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.spinbutton1]));
+		this.spinbuttonDateFrom = new global::Gtk.SpinButton(0D, 100D, 1D);
+		this.spinbuttonDateFrom.CanFocus = true;
+		this.spinbuttonDateFrom.Name = "spinbuttonDateFrom";
+		this.spinbuttonDateFrom.Adjustment.PageIncrement = 10D;
+		this.spinbuttonDateFrom.ClimbRate = 1D;
+		this.spinbuttonDateFrom.Numeric = true;
+		this.hbox4.Add(this.spinbuttonDateFrom);
+		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.spinbuttonDateFrom]));
 		w16.Position = 1;
 		w16.Expand = false;
 		w16.Fill = false;
@@ -261,15 +262,15 @@ public partial class MainWindow
 		w17.Expand = false;
 		w17.Fill = false;
 		// Container child hbox4.Gtk.Box+BoxChild
-		this.spinbutton2 = new global::Gtk.SpinButton(0D, 2020D, 1D);
-		this.spinbutton2.CanFocus = true;
-		this.spinbutton2.Name = "spinbutton2";
-		this.spinbutton2.Adjustment.PageIncrement = 10D;
-		this.spinbutton2.ClimbRate = 1D;
-		this.spinbutton2.Numeric = true;
-		this.spinbutton2.Value = 2020D;
-		this.hbox4.Add(this.spinbutton2);
-		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.spinbutton2]));
+		this.spinbuttonDateTo = new global::Gtk.SpinButton(0D, 2020D, 1D);
+		this.spinbuttonDateTo.CanFocus = true;
+		this.spinbuttonDateTo.Name = "spinbuttonDateTo";
+		this.spinbuttonDateTo.Adjustment.PageIncrement = 10D;
+		this.spinbuttonDateTo.ClimbRate = 1D;
+		this.spinbuttonDateTo.Numeric = true;
+		this.spinbuttonDateTo.Value = 2020D;
+		this.hbox4.Add(this.spinbuttonDateTo);
+		global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.spinbuttonDateTo]));
 		w18.Position = 3;
 		w18.Expand = false;
 		w18.Fill = false;
@@ -290,14 +291,14 @@ public partial class MainWindow
 		global::Gtk.Box.BoxChild w20 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.label6]));
 		w20.Position = 0;
 		// Container child hbox3.Gtk.Box+BoxChild
-		this.spinbutton3 = new global::Gtk.SpinButton(0D, 100D, 1D);
-		this.spinbutton3.CanFocus = true;
-		this.spinbutton3.Name = "spinbutton3";
-		this.spinbutton3.Adjustment.PageIncrement = 10D;
-		this.spinbutton3.ClimbRate = 1D;
-		this.spinbutton3.Numeric = true;
-		this.hbox3.Add(this.spinbutton3);
-		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.spinbutton3]));
+		this.spinbuttonPagesFrom = new global::Gtk.SpinButton(0D, 100D, 1D);
+		this.spinbuttonPagesFrom.CanFocus = true;
+		this.spinbuttonPagesFrom.Name = "spinbuttonPagesFrom";
+		this.spinbuttonPagesFrom.Adjustment.PageIncrement = 10D;
+		this.spinbuttonPagesFrom.ClimbRate = 1D;
+		this.spinbuttonPagesFrom.Numeric = true;
+		this.hbox3.Add(this.spinbuttonPagesFrom);
+		global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.spinbuttonPagesFrom]));
 		w21.Position = 1;
 		w21.Expand = false;
 		w21.Fill = false;
@@ -311,14 +312,14 @@ public partial class MainWindow
 		w22.Expand = false;
 		w22.Fill = false;
 		// Container child hbox3.Gtk.Box+BoxChild
-		this.spinbutton4 = new global::Gtk.SpinButton(0D, 100D, 1D);
-		this.spinbutton4.CanFocus = true;
-		this.spinbutton4.Name = "spinbutton4";
-		this.spinbutton4.Adjustment.PageIncrement = 10D;
-		this.spinbutton4.ClimbRate = 1D;
-		this.spinbutton4.Numeric = true;
-		this.hbox3.Add(this.spinbutton4);
-		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.spinbutton4]));
+		this.spinbuttonPagesTo = new global::Gtk.SpinButton(0D, 100D, 1D);
+		this.spinbuttonPagesTo.CanFocus = true;
+		this.spinbuttonPagesTo.Name = "spinbuttonPagesTo";
+		this.spinbuttonPagesTo.Adjustment.PageIncrement = 10D;
+		this.spinbuttonPagesTo.ClimbRate = 1D;
+		this.spinbuttonPagesTo.Numeric = true;
+		this.hbox3.Add(this.spinbuttonPagesTo);
+		global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.spinbuttonPagesTo]));
 		w23.Position = 3;
 		w23.Expand = false;
 		w23.Fill = false;
@@ -332,34 +333,34 @@ public partial class MainWindow
 		this.hbox2.Name = "hbox2";
 		this.hbox2.Spacing = 6;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.radiobutton3 = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("LINQ"));
-		this.radiobutton3.CanFocus = true;
-		this.radiobutton3.Name = "radiobutton3";
-		this.radiobutton3.DrawIndicator = true;
-		this.radiobutton3.UseUnderline = true;
-		this.radiobutton3.Group = new global::GLib.SList(global::System.IntPtr.Zero);
-		this.hbox2.Add(this.radiobutton3);
-		global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.radiobutton3]));
+		this.radiobuttonLINQ = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("LINQ"));
+		this.radiobuttonLINQ.CanFocus = true;
+		this.radiobuttonLINQ.Name = "radiobuttonLINQ";
+		this.radiobuttonLINQ.DrawIndicator = true;
+		this.radiobuttonLINQ.UseUnderline = true;
+		this.radiobuttonLINQ.Group = new global::GLib.SList(global::System.IntPtr.Zero);
+		this.hbox2.Add(this.radiobuttonLINQ);
+		global::Gtk.Box.BoxChild w25 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.radiobuttonLINQ]));
 		w25.Position = 0;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.radiobutton2 = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("SAX"));
-		this.radiobutton2.CanFocus = true;
-		this.radiobutton2.Name = "radiobutton2";
-		this.radiobutton2.DrawIndicator = true;
-		this.radiobutton2.UseUnderline = true;
-		this.radiobutton2.Group = this.radiobutton3.Group;
-		this.hbox2.Add(this.radiobutton2);
-		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.radiobutton2]));
+		this.radiobuttonSAX = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("SAX"));
+		this.radiobuttonSAX.CanFocus = true;
+		this.radiobuttonSAX.Name = "radiobuttonSAX";
+		this.radiobuttonSAX.DrawIndicator = true;
+		this.radiobuttonSAX.UseUnderline = true;
+		this.radiobuttonSAX.Group = this.radiobuttonLINQ.Group;
+		this.hbox2.Add(this.radiobuttonSAX);
+		global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.radiobuttonSAX]));
 		w26.Position = 1;
 		// Container child hbox2.Gtk.Box+BoxChild
-		this.radiobutton1 = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("DOM"));
-		this.radiobutton1.CanFocus = true;
-		this.radiobutton1.Name = "radiobutton1";
-		this.radiobutton1.DrawIndicator = true;
-		this.radiobutton1.UseUnderline = true;
-		this.radiobutton1.Group = this.radiobutton3.Group;
-		this.hbox2.Add(this.radiobutton1);
-		global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.radiobutton1]));
+		this.radiobuttonDOM = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("DOM"));
+		this.radiobuttonDOM.CanFocus = true;
+		this.radiobuttonDOM.Name = "radiobuttonDOM";
+		this.radiobuttonDOM.DrawIndicator = true;
+		this.radiobuttonDOM.UseUnderline = true;
+		this.radiobuttonDOM.Group = this.radiobuttonLINQ.Group;
+		this.hbox2.Add(this.radiobuttonDOM);
+		global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.radiobuttonDOM]));
 		w27.Position = 2;
 		this.vbox2.Add(this.hbox2);
 		global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox2]));
@@ -371,22 +372,22 @@ public partial class MainWindow
 		this.hbox9.Name = "hbox9";
 		this.hbox9.Spacing = 6;
 		// Container child hbox9.Gtk.Box+BoxChild
-		this.button5 = new global::Gtk.Button();
-		this.button5.CanFocus = true;
-		this.button5.Name = "button5";
-		this.button5.UseUnderline = true;
-		this.button5.Label = global::Mono.Unix.Catalog.GetString("Пошук");
-		this.hbox9.Add(this.button5);
-		global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox9[this.button5]));
+		this.buttonSearch = new global::Gtk.Button();
+		this.buttonSearch.CanFocus = true;
+		this.buttonSearch.Name = "buttonSearch";
+		this.buttonSearch.UseUnderline = true;
+		this.buttonSearch.Label = global::Mono.Unix.Catalog.GetString("Пошук");
+		this.hbox9.Add(this.buttonSearch);
+		global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox9[this.buttonSearch]));
 		w29.Position = 0;
 		// Container child hbox9.Gtk.Box+BoxChild
-		this.button4 = new global::Gtk.Button();
-		this.button4.CanFocus = true;
-		this.button4.Name = "button4";
-		this.button4.UseUnderline = true;
-		this.button4.Label = global::Mono.Unix.Catalog.GetString("Очистити");
-		this.hbox9.Add(this.button4);
-		global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox9[this.button4]));
+		this.buttonClear = new global::Gtk.Button();
+		this.buttonClear.CanFocus = true;
+		this.buttonClear.Name = "buttonClear";
+		this.buttonClear.UseUnderline = true;
+		this.buttonClear.Label = global::Mono.Unix.Catalog.GetString("Очистити");
+		this.hbox9.Add(this.buttonClear);
+		global::Gtk.Box.BoxChild w30 = ((global::Gtk.Box.BoxChild)(this.hbox9[this.buttonClear]));
 		w30.Position = 1;
 		this.vbox2.Add(this.hbox9);
 		global::Gtk.Box.BoxChild w31 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.hbox9]));
@@ -404,10 +405,10 @@ public partial class MainWindow
 		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
 		// Container child GtkScrolledWindow.Gtk.Container+ContainerChild
-		this.textview1 = new global::Gtk.TextView();
-		this.textview1.CanFocus = true;
-		this.textview1.Name = "textview1";
-		this.GtkScrolledWindow.Add(this.textview1);
+		this.textview = new global::Gtk.TextView();
+		this.textview.CanFocus = true;
+		this.textview.Name = "textview";
+		this.GtkScrolledWindow.Add(this.textview);
 		this.hbox1.Add(this.GtkScrolledWindow);
 		global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.GtkScrolledWindow]));
 		w34.Position = 1;
