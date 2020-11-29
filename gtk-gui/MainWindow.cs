@@ -5,11 +5,11 @@ public partial class MainWindow
 {
 	private global::Gtk.UIManager UIManager;
 
-	private global::Gtk.Action Action;
+	private global::Gtk.Action Action11;
 
 	private global::Gtk.Action HTMLAction;
 
-	private global::Gtk.Action Action1;
+	private global::Gtk.Action Action2;
 
 	private global::Gtk.Action AboutAuthorAction;
 
@@ -89,15 +89,15 @@ public partial class MainWindow
 		// Widget MainWindow
 		this.UIManager = new global::Gtk.UIManager();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup("Default");
-		this.Action = new global::Gtk.Action("Action", global::Mono.Unix.Catalog.GetString("Файл"), null, null);
-		this.Action.ShortLabel = global::Mono.Unix.Catalog.GetString("Файл");
-		w1.Add(this.Action, null);
+		this.Action11 = new global::Gtk.Action("Action11", global::Mono.Unix.Catalog.GetString("Файл"), null, null);
+		this.Action11.ShortLabel = global::Mono.Unix.Catalog.GetString("Файл");
+		w1.Add(this.Action11, null);
 		this.HTMLAction = new global::Gtk.Action("HTMLAction", global::Mono.Unix.Catalog.GetString("Конвертувати в HTML"), null, null);
 		this.HTMLAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Конвертувати в HTML");
 		w1.Add(this.HTMLAction, null);
-		this.Action1 = new global::Gtk.Action("Action1", global::Mono.Unix.Catalog.GetString("Інформація"), null, null);
-		this.Action1.ShortLabel = global::Mono.Unix.Catalog.GetString("Інформація");
-		w1.Add(this.Action1, null);
+		this.Action2 = new global::Gtk.Action("Action2", global::Mono.Unix.Catalog.GetString("Інфо"), null, null);
+		this.Action2.ShortLabel = global::Mono.Unix.Catalog.GetString("Інфо");
+		w1.Add(this.Action2, null);
 		this.AboutAuthorAction = new global::Gtk.Action("AboutAuthorAction", global::Mono.Unix.Catalog.GetString("Про автора"), null, null);
 		this.AboutAuthorAction.ShortLabel = global::Mono.Unix.Catalog.GetString("Про автора");
 		w1.Add(this.AboutAuthorAction, null);
@@ -111,10 +111,10 @@ public partial class MainWindow
 		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString("<ui><menubar name=\'menubar1\'><menu name=\'Action\' action=\'Action\'><menuitem name=\'" +
-				"HTMLAction\' action=\'HTMLAction\'/></menu><menu name=\'Action1\' action=\'Action1\'><m" +
-				"enuitem name=\'AboutAuthorAction\' action=\'AboutAuthorAction\'/></menu></menubar></" +
-				"ui>");
+		this.UIManager.AddUiFromString("<ui><menubar name=\'menubar1\'><menu name=\'Action11\' action=\'Action11\'><menuitem na" +
+				"me=\'HTMLAction\' action=\'HTMLAction\'/></menu><menu name=\'Action2\' action=\'Action2" +
+				"\'><menuitem name=\'AboutAuthorAction\' action=\'AboutAuthorAction\'/></menu></menuba" +
+				"r></ui>");
 		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget("/menubar1")));
 		this.menubar1.Name = "menubar1";
 		this.vbox1.Add(this.menubar1);
@@ -408,6 +408,8 @@ public partial class MainWindow
 		this.textview = new global::Gtk.TextView();
 		this.textview.CanFocus = true;
 		this.textview.Name = "textview";
+		this.textview.Editable = false;
+		this.textview.CursorVisible = false;
 		this.GtkScrolledWindow.Add(this.textview);
 		this.hbox1.Add(this.GtkScrolledWindow);
 		global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.GtkScrolledWindow]));
@@ -424,5 +426,9 @@ public partial class MainWindow
 		this.DefaultHeight = 348;
 		this.Show();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
+		this.HTMLAction.Activated += new global::System.EventHandler(this.BtnConvertActivated);
+		this.AboutAuthorAction.Activated += new global::System.EventHandler(this.AboutAuthorActivated);
+		this.buttonSearch.Clicked += new global::System.EventHandler(this.OnSearchClicked);
+		this.buttonClear.Clicked += new global::System.EventHandler(this.OnClearClicked);
 	}
 }

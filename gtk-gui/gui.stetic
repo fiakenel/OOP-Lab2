@@ -8,7 +8,7 @@
   </import>
   <widget class="Gtk.Window" id="MainWindow" design-size="753 348">
     <action-group name="Default">
-      <action id="Action">
+      <action id="Action11">
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Файл</property>
         <property name="ShortLabel" translatable="yes">Файл</property>
@@ -17,16 +17,18 @@
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Конвертувати в HTML</property>
         <property name="ShortLabel" translatable="yes">Конвертувати в HTML</property>
+        <signal name="Activated" handler="BtnConvertActivated" />
       </action>
-      <action id="Action1">
+      <action id="Action2">
         <property name="Type">Action</property>
-        <property name="Label" translatable="yes">Інформація</property>
-        <property name="ShortLabel" translatable="yes">Інформація</property>
+        <property name="Label" translatable="yes">Інфо</property>
+        <property name="ShortLabel" translatable="yes">Інфо</property>
       </action>
       <action id="AboutAuthorAction">
         <property name="Type">Action</property>
         <property name="Label" translatable="yes">Про автора</property>
         <property name="ShortLabel" translatable="yes">Про автора</property>
+        <signal name="Activated" handler="AboutAuthorActivated" />
       </action>
     </action-group>
     <property name="MemberName" />
@@ -40,11 +42,11 @@
         <child>
           <widget class="Gtk.MenuBar" id="menubar1">
             <property name="MemberName" />
-            <node name="__gtksharp_129_Stetic_Editor_ActionMenuBar" type="Menubar">
-              <node type="Menu" action="Action">
+            <node name="__gtksharp_73_Stetic_Editor_ActionMenuBar" type="Menubar">
+              <node type="Menu" action="Action11">
                 <node type="Menuitem" action="HTMLAction" />
               </node>
-              <node type="Menu" action="Action1">
+              <node type="Menu" action="Action2">
                 <node type="Menuitem" action="AboutAuthorAction" />
               </node>
             </node>
@@ -413,6 +415,7 @@
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Пошук</property>
                         <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="OnSearchClicked" />
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -426,6 +429,7 @@
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">Очистити</property>
                         <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="OnClearClicked" />
                       </widget>
                       <packing>
                         <property name="Position">1</property>
@@ -458,6 +462,8 @@
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="ShowScrollbars">True</property>
+                    <property name="Editable">False</property>
+                    <property name="CursorVisible">False</property>
                     <property name="Text" translatable="yes" />
                   </widget>
                 </child>

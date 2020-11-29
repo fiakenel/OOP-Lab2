@@ -8,7 +8,7 @@ namespace Lab2
         public static void Main(string[] args)
         {
             Application.Init();
-            MainWindow win = new MainWindow();
+            MainWindow win = new MainWindow("/home/maksym/Documents/MonoDevelop/Lab2/data.xml");
             win.Show();
             Application.Run();
         }

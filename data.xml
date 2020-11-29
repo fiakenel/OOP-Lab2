@@ -1,91 +1,91 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <library>
-  <book>
-    <title>1984</title>
-    <author>Джордж Орвелл</author>
-    <genre>антиутопія, політична фантастика, соціальна фантастика</genre>
-    <language>англійська</language>
-    <date>1948</date>
-    <pages>328</pages>
-  </book>
-  <book>
-    <title>Ми</title>
-    <author>Євген Замятін</author>
-    <genre>політична антиутопія</genre>
-    <language>російська</language>
-    <date>1921</date>
-    <pages>226</pages>
-  </book>
-  <book>
-    <title>451° за Фаренгейтом</title>
-    <author>Рей Бредбері</author>
-    <genre>антиутопія</genre>
-    <language>англійська</language>
-    <date>1953</date>
-    <pages>256</pages>
-  </book>
-  <book>
-    <title>Злочин і кара</title>
-    <author>Федір Достоєвський</author>
-    <genre>філософський роман, психологічний роман, кримінальний роман</genre>
-    <language>російська</language>
-    <date>1866</date>
-    <pages>672</pages>
-  </book>
-  <book>
-    <title>Невидимець</title>
-    <author>Герберт Велз</author>
-    <genre>наукова фантастика</genre>
-    <language>англійська</language>
-    <date>1897</date>
-    <pages>149</pages>
-  </book>
-  <book>
-    <title>Війна світів</title>
-    <author>Герберт Велз</author>
-    <genre>наукова фантастика</genre>
-    <language>англійська</language>
-    <date>1898</date>
-    <pages>287</pages>
-  </book>
-  <book>
-    <title>Скандал у Богемії</title>
-    <author>Артур Конан Дойл</author>
-    <genre>детектив</genre>
-    <language>англійська</language>
-    <date>1891</date>
-    <pages>24</pages>
-  </book>
-  <book>
-    <title>Собака Баскервілів</title>
-    <author>Артур Конан Дойл</author>
-    <genre>детектив</genre>
-    <language>англійська</language>
-    <date>1891</date>
-    <pages>248</pages>
-  </book>
-  <book>
-    <title>Анна Кареніна</title>
-    <author>Лев Толстой</author>
-    <genre>соціально-психологічний роман</genre>
-    <language>російська</language>
-    <date>1876</date>
-    <pages>864</pages>
-  </book>
-  <book>
-    <title>Майстер і Маргарита</title>
-    <author>Михайло Булгаков</author>
-    <genre>фантастичний роман</genre>
-    <language>російська</language>
-    <date>1967</date>
-    <pages>504</pages>
-  </book>
-  <book>
-    <title>Мертві душі (перший том)</title>
-    <author>Микола Гоголь</author>
-    <genre>драма</genre>
-    <language>російська</language>
-    <date>1842</date>
-    <pages>308</pages>
-  </book>
+  <book
+    title = "1984"
+    author = "Джордж Орвелл"
+    genre = "антиутопія,політична фантастика,соціальна фантастика"
+    language = "англійська"
+    date = "1948"
+    pages = "328"
+  />
+  <book
+    title = "Ми"
+    author = "Євген Замятін"
+    genre = "політична антиутопія"
+    language = "російська"
+    date = "1921"
+    pages = "226"
+  />
+  <book
+    title = "451° за Фаренгейтом"
+    author = "Рей Бредбері"
+    genre = "антиутопія"
+    language = "англійська"
+    date = "1953"
+    pages = "256"
+  />
+  <book
+    title = "Злочин і кара"
+    author = "Федір Достоєвський"
+    genre = "філософський роман,психологічний роман,кримінальний роман"
+    language = "російська"
+    date = "1866"
+    pages = "672"
+  />
+  <book
+    title = "Невидимець"
+    author = "Герберт Велз"
+    genre = "наукова фантастика"
+    language = "англійська"
+    date = "1897"
+    pages = "149"
+  />
+  <book
+    title = "Війна світів"
+    author = "Герберт Велз"
+    genre = "наукова фантастика"
+    language = "англійська"
+    date = "1898"
+    pages = "287"
+  />
+  <book
+    title = "Скандал у Богемії"
+    author = "Артур Конан Дойл"
+    genre = "детектив"
+    language = "англійська"
+    date = "1891"
+    pages = "24"
+  />
+  <book
+    title = "Собака Баскервілів"
+    author = "Артур Конан Дойл"
+    genre = "детектив"
+    language = "англійська"
+    date = "1891"
+    pages = "248"
+  />
+  <book
+    title = "Анна Кареніна"
+    author = "Лев Толстой"
+    genre = "соціально-психологічний роман"
+    language = "російська"
+    date = "1876"
+    pages = "864"
+  />
+  <book
+    title = "Майстер і Маргарита"
+    author = "Михайло Булгаков"
+    genre = "фантастичний роман"
+    language = "російська"
+    date = "1967"
+    pages = "504"
+  />
+  <book
+    title = "Мертві душі (перший том)"
+    author = "Микола Гоголь"
+    genre = "драма"
+    language = "російська"
+    date = "1842"
+    pages = "308"
+  />
 </library>
